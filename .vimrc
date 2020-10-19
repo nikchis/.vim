@@ -17,11 +17,11 @@ colorscheme molokai
 "      Plugins      "
 """""""""""""""""""""
 augroup NERD
-	autocmd!
-	autocmd BufEnter * silent! lcd %:p:h
-	autocmd StdinReadPre * let s:std_in=1
-	autocmd VimEnter * silent! :call NERDTreeInit()
-	autocmd BufEnter * silent! :call BufInit()
+"	autocmd!
+"	autocmd BufEnter * silent! lcd %:p:h
+"	autocmd StdinReadPre * let s:std_in=1
+"	autocmd VimEnter * silent! :call NERDTreeInit()
+"	autocmd BufEnter * silent! :call BufInit()
 augroup END
 
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -128,7 +128,7 @@ set backspace=indent,eol,start  " Makes backspace key more powerful.
 set incsearch                   " Shows the match while typing
 set hlsearch                    " Highlight found searches
 set noerrorbells                " No beeps
-set number                      " Show line numbers
+"set number                      " Show line numbers
 set showcmd                     " Show me what I'm typing
 set noswapfile                  " Don't use swapfile
 set nobackup                    " Don't create annoying backup files
