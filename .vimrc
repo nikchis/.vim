@@ -11,7 +11,9 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-colorscheme molokai
+colorscheme gruvbox
+set background=dark
+"set background=light
 
 """""""""""""""""""""
 "      Plugins      "
@@ -123,7 +125,7 @@ set laststatus=2                " Show status line always
 set encoding=utf-8              " Set default encoding to UTF-8
 set fileencoding=utf-8
 set autoread                    " Automatically read changed files
-set autoindent                  " Enable Autoindent
+"set autoindent                  " Enable Autoindent
 set backspace=indent,eol,start  " Makes backspace key more powerful.
 set incsearch                   " Shows the match while typing
 set hlsearch                    " Highlight found searches
@@ -148,6 +150,9 @@ set nocursorline                " Do not highlight cursor (speeds up highlightin
 set lazyredraw                  " Wait to redraw
 set updatetime=1000
 set cmdheight=2
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
 
 if has('unnamedplus')
   set clipboard^=unnamed
