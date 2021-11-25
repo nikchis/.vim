@@ -149,7 +149,7 @@ set nocursorcolumn              " Do not highlight column (speeds up highlightin
 set nocursorline                " Do not highlight cursor (speeds up highlighting)
 set lazyredraw                  " Wait to redraw
 set updatetime=1000
-set cmdheight=2
+set cmdheight=1
 set tabstop=4
 set shiftwidth=4
 set noexpandtab
