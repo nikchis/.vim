@@ -48,9 +48,9 @@ hi! link lCursor Cursor
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   if &background ==# 'dark'
-    let g:terminal_ansi_colors = ['#073642', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#eee8d5', '#00242a', '#cb4b16', '#586e75', '#657b83', '#839496', '#6c71c4', '#93a1a1', '#fdf6e3']
+    let g:terminal_ansi_colors = ['#092d37', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#eee8d5', '#00242a', '#cb4b16', '#586e75', '#657b83', '#839496', '#6c71c4', '#93a1a1', '#fdf6e3']
     if has('nvim')
-      let g:terminal_color_0 = '#073642'
+      let g:terminal_color_0 = '#092d37'
       let g:terminal_color_1 = '#dc322f'
       let g:terminal_color_2 = '#859900'
       let g:terminal_color_3 = '#b58900'
@@ -76,15 +76,15 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
       hi ToolbarLine guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
     else " opaque
       hi Normal guifg=#93a1a1 guibg=#00242a gui=NONE cterm=NONE
-      hi FoldColumn guifg=#839496 guibg=#073642 gui=NONE cterm=NONE
-      hi Folded guifg=#839496 guibg=#073642 guisp=#00242a gui=bold cterm=bold
+      hi FoldColumn guifg=#839496 guibg=#092d37 gui=NONE cterm=NONE
+      hi Folded guifg=#839496 guibg=#092d37 guisp=#00242a gui=bold cterm=bold
       hi Terminal guifg=fg guibg=#00242a gui=NONE cterm=NONE
-      hi ToolbarButton guifg=#93a1a1 guibg=#073642 gui=bold cterm=bold
-      hi ToolbarLine guifg=NONE guibg=#073642 gui=NONE cterm=NONE
+      hi ToolbarButton guifg=#93a1a1 guibg=#092d37 gui=bold cterm=bold
+      hi ToolbarLine guifg=NONE guibg=#092d37 gui=NONE cterm=NONE
     endif
     if get(g:, 'solarized_visibility', '') ==# 'high'
-      hi CursorLineNr guifg=#cb4b16 guibg=#073642 gui=bold cterm=bold
-      hi LineNr guifg=#839496 guibg=#073642 gui=NONE cterm=NONE
+      hi CursorLineNr guifg=#cb4b16 guibg=#092d37 gui=bold cterm=bold
+      hi LineNr guifg=#839496 guibg=#092d37 gui=NONE cterm=NONE
       hi NonText guifg=#cb4b16 guibg=NONE gui=bold cterm=bold
       hi SpecialKey guifg=#cb4b16 guibg=NONE gui=reverse cterm=reverse
       hi SpellBad guifg=#6c71c4 guibg=#fdf6e3 guisp=#dc322f gui=reverse,undercurl cterm=reverse,underline
@@ -93,20 +93,20 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
       hi SpellRare guifg=#2aa198 guibg=#fdf6e3 guisp=#dc322f gui=reverse,undercurl cterm=reverse,underline
       hi Title guifg=#b58900 guibg=NONE gui=bold cterm=bold
     elseif get(g:, 'solarized_visibility', '') ==# 'low'
-      hi CursorLineNr guifg=#586e75 guibg=#073642 gui=bold cterm=bold
-      hi LineNr guifg=#586e75 guibg=#073642 gui=NONE cterm=NONE
-      hi NonText guifg=#073642 guibg=NONE gui=bold cterm=bold
-      hi SpecialKey guifg=#073642 guibg=NONE gui=reverse cterm=reverse
+      hi CursorLineNr guifg=#586e75 guibg=#092d37 gui=bold cterm=bold
+      hi LineNr guifg=#586e75 guibg=#092d37 gui=NONE cterm=NONE
+      hi NonText guifg=#092d37 guibg=NONE gui=bold cterm=bold
+      hi SpecialKey guifg=#092d37 guibg=NONE gui=reverse cterm=reverse
       hi SpellBad guifg=#6c71c4 guibg=NONE guisp=#6c71c4 gui=undercurl cterm=underline
       hi SpellCap guifg=#6c71c4 guibg=NONE guisp=#6c71c4 gui=undercurl cterm=underline
       hi SpellLocal guifg=#b58900 guibg=NONE guisp=#b58900 gui=undercurl cterm=underline
       hi SpellRare guifg=#2aa198 guibg=NONE guisp=#2aa198 gui=undercurl cterm=underline
       hi Title guifg=#586e75 guibg=NONE gui=bold cterm=bold
     else " normal visibility
-      hi CursorLineNr guifg=#839496 guibg=#073642 gui=bold cterm=bold
-      hi LineNr guifg=#657b83 guibg=#073642 gui=NONE cterm=NONE
+      hi CursorLineNr guifg=#839496 guibg=#092d37 gui=bold cterm=bold
+      hi LineNr guifg=#657b83 guibg=#092d37 gui=NONE cterm=NONE
       hi NonText guifg=#657b83 guibg=NONE gui=bold cterm=bold
-      hi SpecialKey guifg=#657b83 guibg=#073642 gui=bold cterm=bold
+      hi SpecialKey guifg=#657b83 guibg=#092d37 gui=bold cterm=bold
       hi SpellBad guifg=#6c71c4 guibg=NONE guisp=#6c71c4 gui=undercurl cterm=underline
       hi SpellCap guifg=#6c71c4 guibg=NONE guisp=#6c71c4 gui=undercurl cterm=underline
       hi SpellLocal guifg=#b58900 guibg=NONE guisp=#b58900 gui=undercurl cterm=underline
@@ -133,45 +133,45 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
       hi DiffDelete guifg=#dc322f guibg=NONE gui=bold cterm=bold
       hi DiffText guifg=#268bd2 guibg=NONE guisp=#268bd2 gui=NONE cterm=NONE
     else " normal diffmode
-      hi DiffAdd guifg=#859900 guibg=#073642 guisp=#859900 gui=NONE cterm=NONE
-      hi DiffChange guifg=#b58900 guibg=#073642 guisp=#b58900 gui=NONE cterm=NONE
-      hi DiffDelete guifg=#dc322f guibg=#073642 gui=bold cterm=bold
-      hi DiffText guifg=#268bd2 guibg=#073642 guisp=#268bd2 gui=NONE cterm=NONE
+      hi DiffAdd guifg=#859900 guibg=#092d37 guisp=#859900 gui=NONE cterm=NONE
+      hi DiffChange guifg=#b58900 guibg=#092d37 guisp=#b58900 gui=NONE cterm=NONE
+      hi DiffDelete guifg=#dc322f guibg=#092d37 gui=bold cterm=bold
+      hi DiffText guifg=#268bd2 guibg=#092d37 guisp=#268bd2 gui=NONE cterm=NONE
     endif
     if get(g:, 'solarized_statusline', '') ==# 'low'
       hi StatusLine guifg=#586e75 guibg=#eee8d5 gui=reverse cterm=reverse
-      hi StatusLineNC guifg=#586e75 guibg=#073642 gui=reverse cterm=reverse
-      hi TabLine guifg=#586e75 guibg=#073642 gui=reverse cterm=reverse
-      hi TabLineFill guifg=#586e75 guibg=#073642 gui=reverse cterm=reverse
+      hi StatusLineNC guifg=#586e75 guibg=#092d37 gui=reverse cterm=reverse
+      hi TabLine guifg=#586e75 guibg=#092d37 gui=reverse cterm=reverse
+      hi TabLineFill guifg=#586e75 guibg=#092d37 gui=reverse cterm=reverse
       hi TabLineSel guifg=#839496 guibg=#fdf6e3 gui=reverse cterm=reverse
-      hi VertSplit guifg=#073642 guibg=#586e75 gui=NONE cterm=NONE
+      hi VertSplit guifg=#092d37 guibg=#586e75 gui=NONE cterm=NONE
     elseif get(g:, 'solarized_statusline', '') ==# 'flat'
-      hi StatusLine guifg=#073642 guibg=#eee8d5 gui=reverse cterm=reverse
-      hi StatusLineNC guifg=#073642 guibg=#93a1a1 gui=reverse cterm=reverse
-      hi TabLineSel guifg=#eee8d5 guibg=#073642 gui=NONE cterm=NONE
-      hi TabLine guifg=#586e75 guibg=#073642 gui=NONE cterm=NONE
-      hi TabLineFill guifg=#586e75 guibg=#073642 gui=NONE cterm=NONE
-      hi VertSplit guifg=#586e75 guibg=#073642 gui=NONE cterm=NONE
+      hi StatusLine guifg=#092d37 guibg=#eee8d5 gui=reverse cterm=reverse
+      hi StatusLineNC guifg=#092d37 guibg=#93a1a1 gui=reverse cterm=reverse
+      hi TabLineSel guifg=#eee8d5 guibg=#092d37 gui=NONE cterm=NONE
+      hi TabLine guifg=#586e75 guibg=#092d37 gui=NONE cterm=NONE
+      hi TabLineFill guifg=#586e75 guibg=#092d37 gui=NONE cterm=NONE
+      hi VertSplit guifg=#586e75 guibg=#092d37 gui=NONE cterm=NONE
     else
-      hi StatusLine guifg=#839496 guibg=#073642 gui=reverse cterm=reverse
-      hi StatusLineNC guifg=#586e75 guibg=#073642 gui=reverse cterm=reverse
-      hi TabLine guifg=#586e75 guibg=#073642 gui=reverse cterm=reverse
-      hi TabLineFill guifg=#586e75 guibg=#073642 gui=reverse cterm=reverse
-      hi TabLineSel guifg=#839496 guibg=#073642 gui=reverse cterm=reverse
-      hi VertSplit guifg=#073642 guibg=#586e75 gui=NONE cterm=NONE
+      hi StatusLine guifg=#839496 guibg=#092d37 gui=reverse cterm=reverse
+      hi StatusLineNC guifg=#586e75 guibg=#092d37 gui=reverse cterm=reverse
+      hi TabLine guifg=#586e75 guibg=#092d37 gui=reverse cterm=reverse
+      hi TabLineFill guifg=#586e75 guibg=#092d37 gui=reverse cterm=reverse
+      hi TabLineSel guifg=#839496 guibg=#092d37 gui=reverse cterm=reverse
+      hi VertSplit guifg=#092d37 guibg=#586e75 gui=NONE cterm=NONE
     endif
-    hi ColorColumn guifg=NONE guibg=#073642 gui=NONE cterm=NONE
+    hi ColorColumn guifg=NONE guibg=#092d37 gui=NONE cterm=NONE
     hi Conceal guifg=#268bd2 guibg=NONE gui=NONE cterm=NONE
-    hi CursorColumn guifg=NONE guibg=#073642 gui=NONE cterm=NONE
-    hi CursorLine guifg=NONE guibg=#073642 gui=NONE cterm=NONE
+    hi CursorColumn guifg=NONE guibg=#092d37 gui=NONE cterm=NONE
+    hi CursorLine guifg=NONE guibg=#092d37 gui=NONE cterm=NONE
     hi Directory guifg=#268bd2 guibg=NONE gui=NONE cterm=NONE
     hi EndOfBuffer guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
     hi ErrorMsg guifg=#dc322f guibg=#fdf6e3 gui=reverse cterm=reverse
     hi IncSearch guifg=#cb4b16 guibg=NONE gui=standout cterm=standout
-    hi MatchParen guifg=#fdf6e3 guibg=#073642 gui=bold cterm=bold
+    hi MatchParen guifg=#fdf6e3 guibg=#092d37 gui=bold cterm=bold
     hi ModeMsg guifg=#268bd2 guibg=NONE gui=NONE cterm=NONE
     hi MoreMsg guifg=#268bd2 guibg=NONE gui=NONE cterm=NONE
-    hi Pmenu guifg=#93a1a1 guibg=#073642 gui=NONE cterm=NONE
+    hi Pmenu guifg=#93a1a1 guibg=#092d37 gui=NONE cterm=NONE
     hi PmenuSbar guifg=NONE guibg=#586e75 gui=NONE cterm=NONE
     hi PmenuSel guifg=#eee8d5 guibg=#657b83 gui=NONE cterm=NONE
     hi PmenuThumb guifg=NONE guibg=#839496 gui=NONE cterm=NONE
@@ -179,9 +179,9 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
     hi Search guifg=#b58900 guibg=NONE gui=reverse cterm=reverse
     hi SignColumn guifg=#839496 guibg=NONE gui=NONE cterm=NONE
     hi Visual guifg=#586e75 guibg=#00242a gui=reverse cterm=reverse
-    hi VisualNOS guifg=NONE guibg=#073642 gui=reverse cterm=reverse
+    hi VisualNOS guifg=NONE guibg=#092d37 gui=reverse cterm=reverse
     hi WarningMsg guifg=#cb4b16 guibg=NONE gui=bold cterm=bold
-    hi WildMenu guifg=#eee8d5 guibg=#073642 gui=reverse cterm=reverse
+    hi WildMenu guifg=#eee8d5 guibg=#092d37 gui=reverse cterm=reverse
     hi Comment guifg=#586e75 guibg=NONE gui=italic cterm=italic
     hi Constant guifg=#2aa198 guibg=NONE gui=NONE cterm=NONE
     hi CursorIM guifg=NONE guibg=fg gui=NONE cterm=NONE
@@ -331,7 +331,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
     hi! link pandocTableStructureTop pandocTableStructre
     hi! link pandocTableStructureEnd pandocTableStructre
     hi pandocTableZebraLight guifg=#268bd2 guibg=#00242a gui=NONE cterm=NONE
-    hi pandocTableZebraDark guifg=#268bd2 guibg=#073642 gui=NONE cterm=NONE
+    hi pandocTableZebraDark guifg=#268bd2 guibg=#092d37 gui=NONE cterm=NONE
     hi pandocEmphasisTable guifg=#268bd2 guibg=NONE gui=italic cterm=italic
     hi pandocEmphasisNestedTable guifg=#268bd2 guibg=NONE gui=bold cterm=bold
     hi pandocStrongEmphasisTable guifg=#268bd2 guibg=NONE gui=bold cterm=bold
@@ -406,17 +406,17 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
       hi ALEWarningSignLineNr guifg=#b58900 guibg=NONE gui=NONE cterm=NONE
     else
       if get(g:, 'ale_sign_highlight_linenrs', '') ==# 1
-        hi ALEErrorSign guifg=#073642 guibg=#dc322f gui=bold cterm=bold
-        hi ALEInfoSign guifg=#073642 guibg=#2aa198 gui=bold cterm=bold
-        hi ALEWarningSign guifg=#073642 guibg=#b58900 gui=bold cterm=bold
+        hi ALEErrorSign guifg=#092d37 guibg=#dc322f gui=bold cterm=bold
+        hi ALEInfoSign guifg=#092d37 guibg=#2aa198 gui=bold cterm=bold
+        hi ALEWarningSign guifg=#092d37 guibg=#b58900 gui=bold cterm=bold
       else
-        hi ALEErrorSign guifg=#dc322f guibg=#073642 gui=bold cterm=bold
-        hi ALEInfoSign guifg=#2aa198 guibg=#073642 gui=bold cterm=bold
-        hi ALEWarningSign guifg=#b58900 guibg=#073642 gui=bold cterm=bold
+        hi ALEErrorSign guifg=#dc322f guibg=#092d37 gui=bold cterm=bold
+        hi ALEInfoSign guifg=#2aa198 guibg=#092d37 gui=bold cterm=bold
+        hi ALEWarningSign guifg=#b58900 guibg=#092d37 gui=bold cterm=bold
       endif
-      hi ALEErrorSignLineNr guifg=#073642 guibg=#dc322f gui=NONE cterm=NONE
-      hi ALEInfoSignLineNr guifg=#073642 guibg=#2aa198 gui=NONE cterm=NONE
-      hi ALEWarningSignLineNr guifg=#073642 guibg=#b58900 gui=NONE cterm=NONE
+      hi ALEErrorSignLineNr guifg=#092d37 guibg=#dc322f gui=NONE cterm=NONE
+      hi ALEInfoSignLineNr guifg=#092d37 guibg=#2aa198 gui=NONE cterm=NONE
+      hi ALEWarningSignLineNr guifg=#092d37 guibg=#b58900 gui=NONE cterm=NONE
     endif
     hi ALEError guifg=#dc322f guibg=NONE guisp=#dc322f gui=undercurl cterm=undercurl
     hi ALEErrorLine guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
@@ -435,9 +435,9 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
     finish
   endif
   " Light background
-  let g:terminal_ansi_colors = ['#073642', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#eee8d5', '#00242a', '#cb4b16', '#586e75', '#657b83', '#839496', '#6c71c4', '#93a1a1', '#fdf6e3']
+  let g:terminal_ansi_colors = ['#092d37', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#eee8d5', '#00242a', '#cb4b16', '#586e75', '#657b83', '#839496', '#6c71c4', '#93a1a1', '#fdf6e3']
   if has('nvim')
-    let g:terminal_color_0 = '#073642'
+    let g:terminal_color_0 = '#092d37'
     let g:terminal_color_1 = '#dc322f'
     let g:terminal_color_2 = '#859900'
     let g:terminal_color_3 = '#b58900'
@@ -547,9 +547,9 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
     hi VertSplit guifg=#586e75 guibg=#93a1a1 gui=NONE cterm=NONE
     hi WildMenu guifg=#586e75 guibg=#fdf6e3 gui=reverse cterm=reverse
   elseif get(g:, 'solarized_statusline', '') ==# 'flat'
-    hi StatusLine guifg=#eee8d5 guibg=#073642 gui=reverse cterm=reverse
+    hi StatusLine guifg=#eee8d5 guibg=#092d37 gui=reverse cterm=reverse
     hi StatusLineNC guifg=#eee8d5 guibg=#586e75 gui=reverse cterm=reverse
-    hi TabLineSel guifg=#073642 guibg=#eee8d5 gui=NONE cterm=NONE
+    hi TabLineSel guifg=#092d37 guibg=#eee8d5 gui=NONE cterm=NONE
     hi TabLine guifg=#93a1a1 guibg=#eee8d5 gui=NONE cterm=NONE
     hi TabLineFill guifg=#93a1a1 guibg=#eee8d5 gui=NONE cterm=NONE
     hi VertSplit guifg=#93a1a1 guibg=#eee8d5 gui=NONE cterm=NONE
@@ -561,7 +561,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
     hi TabLineFill guifg=#839496 guibg=#eee8d5 gui=reverse cterm=reverse
     hi TabLineSel guifg=#586e75 guibg=#eee8d5 gui=reverse cterm=reverse
     hi VertSplit guifg=#586e75 guibg=#93a1a1 gui=NONE cterm=NONE
-    hi WildMenu guifg=#073642 guibg=#eee8d5 gui=reverse cterm=reverse
+    hi WildMenu guifg=#092d37 guibg=#eee8d5 gui=reverse cterm=reverse
   endif
   hi ColorColumn guifg=NONE guibg=#eee8d5 gui=NONE cterm=NONE
   hi Conceal guifg=#268bd2 guibg=NONE gui=NONE cterm=NONE
@@ -2426,7 +2426,7 @@ if s:t_Co >= 2
 endif
 
 " Background: dark
-" Color: base02   #073642   236      0
+" Color: base02   #092d37   236      0
 " Color: red      #dc322f   160      1
 " Color: green    #859900   106      2
 " Color: yellow   #b58900   136      3
@@ -2446,7 +2446,7 @@ endif
 " Term Colors: base02 red    green  yellow blue  magenta cyan  base2
 " Term Colors: base03 orange base01 base00 base0 violet  base1 base3
 " Background: light
-" Color: base2    #073642   236        0
+" Color: base2    #092d37   236        0
 " Color: red      #dc322f   160        1
 " Color: green    #859900   106        2
 " Color: yellow   #b58900   136        3

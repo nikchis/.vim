@@ -18,12 +18,13 @@ set background=dark
 """""""""""""""""""""
 "      Plugins      "
 """""""""""""""""""""
+packadd nerdtree
 augroup NERD
-"	autocmd!
-"	autocmd BufEnter * silent! lcd %:p:h
-"	autocmd StdinReadPre * let s:std_in=1
-"	autocmd VimEnter * silent! :call NERDTreeInit()
-"	autocmd BufEnter * silent! :call BufInit()
+	autocmd!
+	autocmd BufEnter * silent! lcd %:p:h
+	autocmd StdinReadPre * let s:std_in=1
+	autocmd VimEnter * silent! :call NERDTreeInit()
+	autocmd BufEnter * silent! :call BufInit()
 augroup END
 
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -57,7 +58,6 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_user_command = 'find %s -type f'
 
 """""""""""""""""""""
-
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
@@ -65,6 +65,21 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline_highlighting_cache = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+
+""""""""""""""""""""""
+packadd vim-signify
+let g:signify_realtime = 0 
+let g:signify_vcs_list = [ 'git', 'hg' ]
+let g:signify_mapping_next_hunk = '<leader>gj'
+let g:signify_mapping_prev_hunk = '<leader>gk'
+let g:signify_mapping_toggle_highlight = '<leader>gh'
+let g:signify_mapping_toggle = '<leader>gt'
+let g:signify_line_highlight = 0
+let g:signify_sign_add  = '+'
+let g:signify_sign_delete = '-'
+let g:signify_sign_change = '*'
+let g:signify_sign_change_delete = '*_'
+let g:signify_sign_delete_first_line = '‾'
 
 """"""""""""""""""""""
 let g:vim_logo = [
@@ -113,7 +128,7 @@ hi StartifySpecial ctermfg=240
 """"""""""""""""""""""
 "      Settings      "
 """"""""""""""""""""""
-set secure			" Run in secure mode
+set secure
 set noro
 set nocompatible                " Enables us Vim specific features
 filetype off                    " Reset filetype detection first ...
@@ -130,7 +145,7 @@ set backspace=indent,eol,start  " Makes backspace key more powerful.
 set incsearch                   " Shows the match while typing
 set hlsearch                    " Highlight found searches
 set noerrorbells                " No beeps
-"set number                      " Show line numbers
+set number                      " Show line numbers
 set showcmd                     " Show me what I'm typing
 set noswapfile                  " Don't use swapfile
 set nobackup                    " Don't create annoying backup files
