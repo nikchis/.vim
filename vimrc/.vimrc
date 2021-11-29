@@ -13,7 +13,6 @@ endif
 
 colorscheme solarized8
 set background=dark
-"set background=light
 
 """""""""""""""""""""
 "      Plugins      "
@@ -52,6 +51,49 @@ function! NERDTreeInit()
    endif
 endfunction
 
+""""""""""""""""""""""
+augroup VIM-PY
+	autocmd!
+	autocmd BufRead,BufNewFile *.py :packadd python-mode
+augroup END
+
+let g:pymode_options_max_line_length = 100
+
+""""""""""""""""""""""
+augroup VIM-GO
+	autocmd!
+	autocmd BufRead,BufNewFile *.go :packadd vim-go
+	" Autocomplete binding
+	autocmd filetype go inoremap <buffer> . .<C-x><C-o>
+	" :GoMetaLinter
+	autocmd FileType go nmap <Leader>l <Plug>(go-metalinter)
+	" :GoDef but opens in a vertical split
+	autocmd FileType go nmap <Leader>v <Plug>(go-def-vertical)
+	" :GoDef but opens in a horizontal split
+	autocmd FileType go nmap <Leader>s <Plug>(go-def-split)
+	" :GoAlternate  commands :A, :AV, :AS and :AT
+	autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+	autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+	autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+	autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+augroup END
+
+"let g:go_addtags_transform= 'camelcase'
+let g:go_addtags_transform= 'snakecase'
+let g:go_auto_type_info=1 
+let g:go_code_completion_enabled=1
+let g:go_jump_to_error = 0
+let g:go_def_mode= 'godef'
+let g:go_fmt_command = 'goimports'
+let g:go_fmt_options = {
+  \ 'gofmt': '-s',
+  \ 'goimports': '-local gitlab.com/nikchis',
+  \ }
+let g:go_list_type = 'quickfix'
+let g:go_fmt_fail_silently = 0
+let g:go_fmt_autosave = 1 
+let g:go_mod_fmt_autosave = 1
+
 """""""""""""""""""""
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -68,7 +110,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 
 """"""""""""""""""""""
 packadd vim-signify
-let g:signify_realtime = 0 
+let g:signify_realtime = 1
 let g:signify_vcs_list = [ 'git', 'hg' ]
 let g:signify_mapping_next_hunk = '<leader>gj'
 let g:signify_mapping_prev_hunk = '<leader>gk'
@@ -163,7 +205,8 @@ set pumheight=10                " Completion window max size
 set nocursorcolumn              " Do not highlight column (speeds up highlighting)
 set nocursorline                " Do not highlight cursor (speeds up highlighting)
 set lazyredraw                  " Wait to redraw
-set updatetime=1000
+"set updatetime=1000
+set updatetime=250
 set cmdheight=2
 set tabstop=4
 set shiftwidth=4
