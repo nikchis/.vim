@@ -273,3 +273,7 @@ nnoremap <Leader>0 :10b<Bar>NERDTreeFind<Bar>wincmd p<CR>
 
 nnoremap <F3> :set invpaste paste?<CR>
 set pastetoggle=<F3>
+
+" Disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+setlocal formatoptions-=c formatoptions-=r formatoptions-=o
